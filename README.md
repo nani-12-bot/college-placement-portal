@@ -30,7 +30,8 @@ A web-based placement management system that connects students, companies, and a
 
 ## Project Screenshots
 
-(Add screenshots here)
+<img width="724" height="434" alt="image" src="https://github.com/user-attachments/assets/a762fc1b-ca06-4a64-974d-a2d364c55135" />
+
 
 ## Future Enhancements
 
