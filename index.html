@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Placement Portal</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    color:white;
+}
+
+/* Overlay for readability */
+.overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.45);
+    z-index:1;
+}
+
+/* Floating abstract shapes */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    animation: float 15s linear infinite;
+}
+
+.shape1 { width: 200px; height: 200px; top:10%; left:5%; }
+.shape2 { width: 250px; height: 250px; top:30%; left:70%; }
+.shape3 { width: 150px; height: 150px; top:60%; left:30%; }
+.shape4 { width: 180px; height: 180px; top:75%; left:80%; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity:1; }
+    100% { transform: translateY(-600px) rotate(360deg); opacity:0; }
+}
+
+/* Landing Text */
+.landing-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.landing-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.landing-text p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Buttons container */
+.button-container {
+    position: relative;
+    z-index:2;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:15px;
+}
+
+/* Transparent Buttons */
+.main-btn {
+    width:250px;
+    padding:16px;
+    background: rgba(255,255,255,0); /* transparent */
+    color:white;
+    border: 2px solid #4f7cff;
+    border-radius:12px;
+    font-size:17px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+    background: rgba(79,124,255,0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(79,124,255,0.4);
+}
+
+/* Footer */
+.footer2 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+    opacity:0.8;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- Floating abstract shapes -->
+<div class="shape shape1"></div>
+<div class="shape shape2"></div>
+<div class="shape shape3"></div>
+<div class="shape shape4"></div>
+
+<!-- Landing Text -->
+<div class="landing-text">
+    <h1>College Placement Portal</h1>
+    <p>Your Gateway to Career Opportunities & Company Connections</p>
+</div>
+
+<div class="button-container">
+    <a href="student_register.html"><button class="main-btn">Student Registration</button></a>
+    <a href="company_register.html"><button class="main-btn">Company Registration</button></a>
+    <a href="student_login.html"><button class="main-btn">Student Login</button></a>
+    <a href="company_login.html"><button class="main-btn">Company Login</button></a>
+    <a href="jobs.html"><button class="main-btn">Job Search</button></a> <!-- New Button -->
+    <a href="about.html"><button class="main-btn">About</button></a>
+    <a href="admin_dashboard.html"><button class="main-btn">Admin Dashboard</button></a> <!-- Admin Dashboard Button -->
+
+
+<div class="footer2">© 2025 College Placement Portal</div>
+
+</body>
+</html>

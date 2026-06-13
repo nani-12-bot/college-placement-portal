@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') 
+                no-repeat center center/cover;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.6);
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        th {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .approve-btn {
+            padding: 8px 15px;
+            background-color: limegreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .reject-btn {
+            padding: 8px 15px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.4);
+        }
+    </style>
+
+</head>
+<body>
+
+<header>Admin Dashboard</header>
+
+<div class="container">
+
+    <h2 class="section-title">Company Requests</h2>
+
+    <table>
+        <tr>
+            <th>Company Name</th>
+            <th>HR Name</th>
+            <th>Contact</th>
+            <th>Website</th>
+            <th>Actions</th>
+        </tr>
+
+        <tr>
+            <td>Infosys</td>
+            <td>Rahul Sharma</td>
+            <td>9876543210</td>
+            <td>infosys.com</td>
+            <td>
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>TCS</td>
+            <td>Megha Singh</td>
+            <td>9876501234</td>
+            <td>tcs.com</td>
+            <td>
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+            </td>
+        </tr>
+        <td>WIPRO</td>
+            <td>Amit Kumar</td>
+            <td>9876512340</td>
+            <td>wipro.com</td>
+            <td>
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+</body>
+</html>

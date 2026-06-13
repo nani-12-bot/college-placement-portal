@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            color: white;
+        }
+
+        .container {
+            width: 420px;
+            margin: 40px auto;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 8px;
+            font-size: 15px;
+            color: rgb(21, 20, 20);
+            outline: none;
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
+        }
+
+        input::placeholder {
+            color: #1d1c1c;
+        }
+
+        input:focus, select:focus {
+            border-color: white;
+            box-shadow: 0 0 8px rgba(255,255,255,0.6);
+        }
+
+        select[multiple] {
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: transparent;
+            border: 2px solid white;
+            color: rgb(40, 39, 39);
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: rgba(24, 24, 24, 0.2);
+            box-shadow: 0 0 10px rgba(40, 40, 40, 0.6);
+        }
+
+        .note {
+            color: #e0e0e0;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* Back button */
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: rgb(252, 249, 249);
+            text-decoration: none;
+            border: 2px solid rgb(231, 225, 225);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            background: transparent;
+        }
+
+        .back-btn:hover {
+            background: rgba(12, 12, 12, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn">⬅ Back</a>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+
+        <form action="student_register.php" method="POST" enctype="multipart/form-data">
+
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Enter full name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create password" required>
+
+            <label>Branch</label>
+            <select name="branch" required>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="IT">IT</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+            </select>
+
+            <label>Preferred Job Locations</label>
+            <select name="locations[]" required>
+                <optgroup label="Telangana">
+                    <option>Hyderabad</option>
+                    <option>Warangal</option>
+                    <option>Nizamabad</option>
+                    <option>Karimnagar</option>
+                </optgroup>
+
+                <optgroup label="Bangalore">
+                    <option>Whitefield</option>
+                    <option>Electronic City</option>
+                    <option>Marathahalli</option>
+                </optgroup>
+
+                <optgroup label="Mumbai">
+                    <option>Bandra</option>
+                    <option>Andheri</option>
+                    <option>Navi Mumbai</option>
+                </optgroup>
+            </select>
+
+            <label>Upload Resume</label>
+            <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+            <p class="note">Upload your latest resume</p>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
